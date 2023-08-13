@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Floristeria Formulario Para Ordenar</h1>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <h2>Informacion Personal</h2>
+
+                <form>
+                    <ul>
+                        <li>
+                            <input type="text" name="nombre" id="nombre" placeholder="Name">
+                        </li>
+
+                        <li>
+                            <input type="text" name="email" id="email" placeholder="Email">
+                        </li>
+
+                        <li>
+                            <label for="provincia">Seleccione su provincia de residencia</label>
+                            <select name="provincia" id="provincia" >
+                                <option value="" selected>Selecciona una provincia</option>
+                            </select>
+                        </li>
+
+                        <li>
+                            <label for="canton">Seleccione su canton de residencia</label>
+                            <select name="canton" id="canton">
+                            </select>
+                            <button type="button" onclick="CargarDistritos()">Confirmar Canton</button>
+                        </li>
+
+                        <li>
+                            <label id="distritoLabel" for="distrito">Seleccione su distrito de residencia</label>
+                            <select name="distrito" id="distrito"></select>
+                        </li>
+
+                        <li>
+                            <input type="text" name="senas" id="senas" placeholder="Señas">
+                        </li>
+
+                        <li>
+                            <input type="text" name="telefono" id="telefono" placeholder="Telefono">
+                        </li>
+                    </ul>
+                </form>
+            </article>
+
+            <article>
+                <h2>Detalles de la Orden</h2>
+
+                <form>
+                    <ul>
+                        <li>
+                            <label for="cantidad">Cantidad</label>
+                            <select name="cantidad" id="cantidad">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </li>
+
+                        <li>
+                            <label for="producto">Producto</label>
+                            <select name="producto" id="producto">
+                                <option value="Ramo Tulipanes">Ramo Tulipanes</option>
+                                <option value="Ramo Gerbera">Ramo Gerbera</option>
+                            </select>
+                        </li>
+
+                        <li>
+                            <label for="tamano">Tamaño</label>
+                            <select name="tamano" id="tamano">
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Big">Big</option>
+                            </select>
+                        </li>
+
+                        <li>
+                            <button type="button" onclick="Registrar()">Registrar</button>
+                            <button type="reset" onclick="Limpiar()">Limpiar</button>
+                            <button type="button" onclick="MostrarTotal()">Total A Pagar</button>
+                        </li>
+                    </ul>
+                </form>
+            </article>
+
+            <article>
+                <h2>Producto Seleccionado</h2>
+
+                <table id="tabla">
+                    <tr>
+                        <th>Cantidad</th>
+                        <th>Producto</th>
+                        <th>Tamaño</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                    </tr>
+                </table>
+
+                <p id="txtTotal"></p>
+            </article>
+        </section>
+    </main>
+
+    <script src="API.js"></script>
+</body>
+</html>

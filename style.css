@@ -1,0 +1,19 @@
+ul li{
+    margin-bottom: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+#distrito{
+    display: none;
+}
+
+#distritoLabel{
+    display: none;
+}
+
+table, td, th{
+    border: solid 1px;
+}
